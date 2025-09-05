@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --verydarkgrayishblue: hsl(217, 19%, 35%);
+  --desaturateddarkblue: hsl(214, 17%, 51%);
+  --grayishblue: hsl(212, 23%, 69%);
+  --lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+html,
+body {
+  background-color: var(--lightgrayishblue);
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+}
+
+.container {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  width: 51%;
+  margin: 3em;
+  display: flex;
+  flex-direction: row;
+}
+
+.article-container-img {
+  flex-basis: 39%;
+  flex-grow: 0.5;
+  flex-shrink: 0.5;
+}
+
+.article-image-position {
+  width: 122%;
+  height: 100%;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.article-container-details {
+  flex-basis: 61%;
+  flex-grow: 0.5;
+  flex-shrink: 0.5;
+  height: auto;
+  background-color: white;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.6em;
+  padding: 2.5em 3em 2.5em 3em;
+}
+
+.article-container-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 1.1em;
+}
+
+.article-title {
+  font-size: 1.59em;
+  font-weight: 700;
+  color: var(--verydarkgrayishblue);
+}
+
+.article-desc {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--grayishblue);
+}
+
+.article-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.avatar-image {
+  align-self: flex-start;
+  display: block;
+  border-radius: 50%;
+  max-width: 14%;
+}
+
+.contact-name {
+  font-weight: 700;
+  color: var(--verydarkgrayishblue);
+}
+
+.contact-postdate {
+  font-weight: 700;
+  color: var(--grayishblue);
+}
+
+.container-sharebtn {
+  width: 32px;
+  height: 32px;
+  background-color: var(--lightgrayishblue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  min-height: 5vh;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=index.css.map */
