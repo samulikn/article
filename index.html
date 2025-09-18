@@ -10,15 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/index.css">
-
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
-
   <title>Frontend Mentor | Article preview component</title>
 </head>
 
 <body>
   <main class="container">
-    <article class="article">
+    <article class="article" id="article1">
       <div class="article-container-img">
         <img src="images/drawers.jpg" alt="drawers" class="article-image-position">
       </div>
@@ -38,16 +35,37 @@
             </div>
           </div>
           <div id="sharebtn" class="container-sharebtn">
-            <img src="images/icon-share.svg">
+            <img src="images/icon-share.svg" alt="share">
           </div>
+        </div>
+        <div class="shareicons-desktop-container">
+          <div class="rectangle">
+            <p class="share-text">SHARE</p>
+            <div class="share-icons">
+              <img class="share-icon" src="images/icon-facebook.svg" alt="facebook">
+              <img class="share-icon" src="images/icon-twitter.svg" alt="twitter">
+              <img class="share-icon" src="images/icon-pinterest.svg" alt="pinterest">
+            </div>
+          </div>
+          <div class="triangle"></div>
+        </div>
+      </div>
+      <div class="shareicons-container">
+        <p class="share-text">SHARE</p>
+        <div class="share-icons">
+          <img class="share-icon" src="images/icon-facebook.svg" alt="facebook">
+          <img class="share-icon" src="images/icon-twitter.svg" alt="twitter">
+          <img class="share-icon" src="images/icon-pinterest.svg" alt="pinterest">
+        </div>
+        <div class="container-active-sharebtn">
+          <img src="images/icon-share.svg" alt="share" class="sharebtn-active">
         </div>
       </div>
     </article>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT"
         target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://www.linkedin.com/in/nataliia-shobotova-912954b6/" target="_blank">Nataliia
-        Shobotova</a>.
+      Coded by <a href="https://github.com/samulikn" target="_blank">Nataliia</a>.
     </div>
   </main>
 </body>

@@ -32,10 +32,9 @@ body {
 }
 
 .article {
-  width: 51%;
-  min-width: 275px;
+  width: 740px;
   height: 278px;
-  margin: 3em;
+  margin: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -45,8 +44,6 @@ body {
   height: 100%;
   flex-basis: 39%;
   overflow: hidden;
-  flex-grow: 1;
-  flex-shrink: 1;
   border-radius: 1em 0 0 1em;
   max-width: fit-content;
 }
@@ -57,8 +54,6 @@ body {
 
 .article-container-details {
   flex-basis: 61%;
-  flex-shrink: 1;
-  flex-grow: 1;
   background-color: var(--white);
   border-radius: 0 1em 1em 0;
   display: flex;
@@ -69,15 +64,15 @@ body {
 }
 
 .article-title {
-  font-size: 1.4vw;
-  line-height: 140%;
+  font-size: 1.58rem;
+  line-height: 135%;
   font-weight: 700;
   color: var(--verydarkgrayishblue);
 }
 
 .article-desc {
-  font-size: 0.89vw;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 150%;
   color: var(--grayishblue);
 }
@@ -105,14 +100,16 @@ body {
 }
 
 .contact-name {
-  font-size: 0.9vw;
+  font-size: 1rem;
   font-weight: 700;
+  line-height: 135%;
   color: var(--verydarkgrayishblue);
 }
 
 .contact-postdate {
-  font-size: 0.9vw;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 150%;
   color: var(--grayishblue);
 }
 
@@ -127,6 +124,54 @@ body {
   align-items: center;
 }
 
+.shareicons-container {
+  display: none;
+}
+.shareicons-desktop-container {
+  visibility: hidden;
+  position: absolute;
+}
+
+.rectangle {
+  width: 250px;
+  height: 50px;
+  background-color: var(--verydarkgrayishblue);
+  position: relative;
+  top: 7.5em;
+  right: -17.1em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.triangle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  rotate: 45deg;
+  top: 6.8em;
+  left: 26.1em;
+  background-color: var(--verydarkgrayishblue);
+}
+
+.share-text {
+  color: var(--grayishblue);
+  letter-spacing: 0.4em;
+  width: 5em;
+}
+
+.share-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.sharebtn-active {
+  filter: brightness(0) invert(1);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -139,8 +184,10 @@ body {
 
 @media only screen and (max-width: 767px) {
   .article {
-    width: 87%;
-    height: 510px;
+    position: relative;
+    width: 326px;
+    height: 545px;
+    margin: 2rem 2rem 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,38 +206,61 @@ body {
     top: -6%;
   }
   .article-container-details {
-    flex-basis: 56%;
-    justify-content: flex-start;
+    flex-basis: 57%;
     padding: 2.7em 2.4em 1.5em 2.3em;
     border-radius: 0 0 1em 1em;
-    gap: 1em;
   }
 
   .article-title {
-    font-size: 4.4vw;
-    font-weight: 700;
-    line-height: 140%;
+    font-size: 1.27rem;
+    line-height: 145%;
     color: var(--verydarkgrayishblue);
   }
 
   .article-desc {
-    font-size: 3.6vw;
+    font-size: 1.03rem;
     font-weight: 500;
-    line-height: 150%;
-  }
-
-  .contact-details {
-    gap: 1.4em;
+    line-height: 145%;
   }
 
   .contact-name {
-    font-size: 1rem;
     line-height: 150%;
   }
 
   .contact-postdate {
-    font-size: 1rem;
     font-weight: 500;
-    line-height: 150%;
+  }
+
+  .shareicons-desktop-container {
+    display: none;
+  }
+
+  .shareicons-container {
+    visibility: hidden;
+    width: 326px;
+    height: 5rem;
+    margin-bottom: 2rem;
+    padding: 0 2.4em 0 2.3em;
+    position: absolute;
+    top: 35.7em;
+    background-color: var(--verydarkgrayishblue);
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 0 1em 1em;
+    justify-content: start;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .container-active-sharebtn {
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+    background-color: var(--grayishblue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
   }
 }
