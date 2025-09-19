@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/index.css">
+  <script src="/script.js" defer></script>
   <title>Frontend Mentor | Article preview component</title>
 </head>
 
@@ -34,33 +34,26 @@
               <p class="contact-postdate">28 Jun 2020</p>
             </div>
           </div>
-          <div id="sharebtn" class="container-sharebtn">
-            <img src="images/icon-share.svg" alt="share">
+          <div id="sharebtn" class="container-sharebtn sharebtn">
+            <img id="shareicon" src="images/icon-share.svg" alt="share" class="shareicon">
           </div>
-        </div>
-        <div class="shareicons-desktop-container">
-          <div class="rectangle">
-            <p class="share-text">SHARE</p>
-            <div class="share-icons">
-              <img class="share-icon" src="images/icon-facebook.svg" alt="facebook">
-              <img class="share-icon" src="images/icon-twitter.svg" alt="twitter">
-              <img class="share-icon" src="images/icon-pinterest.svg" alt="pinterest">
-            </div>
-          </div>
-          <div class="triangle"></div>
         </div>
       </div>
-      <div class="shareicons-container">
+      <div id="shareto" class="shareicons">
         <p class="share-text">SHARE</p>
-        <div class="share-icons">
-          <img class="share-icon" src="images/icon-facebook.svg" alt="facebook">
-          <img class="share-icon" src="images/icon-twitter.svg" alt="twitter">
-          <img class="share-icon" src="images/icon-pinterest.svg" alt="pinterest">
-        </div>
-        <div class="container-active-sharebtn">
-          <img src="images/icon-share.svg" alt="share" class="sharebtn-active">
+        <div class="icons">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img class="share-icon" src="images/icon-facebook.svg" alt="facebook">
+          </a>
+          <a href="https://x.com/" target="_blank">
+            <img class="share-icon" src="images/icon-twitter.svg" alt="twitter">
+          </a>
+          <a href="https://www.pinterest.com/" target="_blank">
+            <img class="share-icon" src="images/icon-pinterest.svg" alt="pinterest">
+          </a>
         </div>
       </div>
+      <div id="triangle" class="triangle"></div>
     </article>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT"
