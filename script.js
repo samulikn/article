@@ -29,7 +29,12 @@ document.addEventListener("keydown", (e) => {
 
 // When the user clicks anywhere outside of the sharing content, close it
 document.addEventListener("click", (e) => {
-  if (!shareBtn.contains(e.target) && !shareTo.contains(e.target)) {
+  const sharingVisibility = shareTo.style.visibility;
+  if (
+    !shareBtn.contains(e.target) &&
+    !shareTo.contains(e.target) &&
+    sharingVisibility === "visible"
+  ) {
     removeActiveState();
   }
 });
