@@ -18,13 +18,13 @@ body {
   background-color: var(--lightgrayishblue);
   font-size: 13px;
   font-family: "Manrope", sans-serif;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .container {
-  height: inherit;
-  width: inherit;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +32,7 @@ body {
 }
 
 .article {
+  position: relative;
   width: 740px;
   height: 278px;
   margin: 2rem;
@@ -118,30 +119,22 @@ body {
   width: 2.4rem;
   height: 2.4rem;
   flex-shrink: 0;
-  background-color: var(--lightgrayishblue);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.shareicons-container {
-  display: none;
-}
-
-.shareicons-desktop-container {
+.shareicons {
   visibility: hidden;
   position: absolute;
-}
-
-.rectangle {
   width: 250px;
   height: 50px;
+  top: 10.3em;
+  left: 42.6em;
   background-color: var(--verydarkgrayishblue);
-  position: relative;
-  top: 7.5em;
-  right: -17.1em;
   border-radius: 1em;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,29 +142,44 @@ body {
 }
 
 .triangle {
-  position: relative;
+  visibility: hidden;
+  position: absolute;
   width: 20px;
   height: 20px;
   rotate: 45deg;
-  top: 6.8em;
-  left: 26.1em;
+  top: 13.3em;
+  left: 52em;
   background-color: var(--verydarkgrayishblue);
 }
 
 .share-text {
   color: var(--grayishblue);
   letter-spacing: 0.4em;
-  width: 5em;
+  font-weight: 500;
 }
 
-.share-icons {
+.icons {
   display: flex;
   align-items: center;
   gap: 1.2em;
 }
 
+.sharebtn {
+  background-color: var(--lightgrayishblue);
+}
+
+.shareicon {
+  filter: brightness(1) invert(0);
+}
+
 .sharebtn-active {
+  background-color: var(--desaturateddarkblue);
+  z-index: 1;
+}
+
+.shareicon-active {
   filter: brightness(0) invert(1);
+  z-index: 1;
 }
 
 .attribution {
@@ -226,17 +234,13 @@ body {
   .contact-postdate {
     font-weight: 500;
   }
-  .shareicons-desktop-container {
-    display: none;
-  }
-  .shareicons-container {
-    visibility: hidden;
+  .shareicons {
+    position: absolute;
     width: 326px;
     height: 5rem;
-    margin-bottom: 2rem;
-    padding: 0 2.4em 0 2.3em;
-    position: absolute;
+    padding: 0 2.4em 1em 2.3em;
     top: 35.7em;
+    left: 0;
     background-color: var(--verydarkgrayishblue);
     display: flex;
     flex-direction: row;
@@ -245,15 +249,7 @@ body {
     align-items: center;
     gap: 1.5em;
   }
-  .container-active-sharebtn {
-    width: 2.4rem;
-    height: 2.4rem;
-    flex-shrink: 0;
-    background-color: var(--grayishblue);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
+  .triangle {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */
