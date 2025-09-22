@@ -16,7 +16,7 @@
 html,
 body {
   background-color: var(--lightgrayishblue);
-  font-size: 13px;
+  font-size: 100%;
   font-family: "Manrope", sans-serif;
   height: 100%;
   width: 100%;
@@ -33,9 +33,9 @@ body {
 
 .article {
   position: relative;
-  width: 740px;
-  height: 278px;
   margin: 2rem;
+  width: 45.5rem;
+  height: 17.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -60,19 +60,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 1em;
-  padding: 2.5em 3.3em 2.5em 3em;
+  gap: 0.8em;
+  padding: 2em 2.5em 1.8em 2.5em;
 }
 
 .article-title {
-  font-size: 1.58rem;
+  font-size: 1.28rem;
   line-height: 135%;
   font-weight: 700;
   color: var(--verydarkgrayishblue);
 }
 
 .article-desc {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   line-height: 150%;
   color: var(--grayishblue);
@@ -90,34 +90,35 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.4em;
+  gap: 1em;
 }
 
 .avatar-image {
   border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   flex-shrink: 0;
 }
 
 .contact-name {
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  line-height: 135%;
+  line-height: 150%;
   color: var(--verydarkgrayishblue);
 }
 
 .contact-postdate {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   line-height: 150%;
   color: var(--grayishblue);
 }
 
 .container-sharebtn {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
+  border-style: none;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -127,40 +128,44 @@ body {
 .shareicons {
   visibility: hidden;
   position: absolute;
-  width: 250px;
-  height: 50px;
-  top: 10.3em;
-  left: 42.6em;
+  min-width: 15.3rem;
+  min-height: 3.5rem;
+  top: 8.1rem;
+  right: -3.8rem;
   background-color: var(--verydarkgrayishblue);
-  border-radius: 1em;
-  margin: auto;
+  border-radius: 0.8em;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
 }
 
 .triangle {
   visibility: hidden;
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   rotate: 45deg;
-  top: 13.3em;
-  left: 52em;
+  top: 10.8rem;
+  right: 2.8rem;
   background-color: var(--verydarkgrayishblue);
 }
 
 .share-text {
   color: var(--grayishblue);
   letter-spacing: 0.4em;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 .icons {
   display: flex;
   align-items: center;
-  gap: 1.2em;
+  gap: 1em;
+}
+
+.sharebtn:hover {
+  cursor: pointer;
 }
 
 .sharebtn {
@@ -181,22 +186,22 @@ body {
   z-index: 1;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  min-height: 5vh;
-}
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
+//   min-height: 5vh;
+// }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+// .attribution a {
+//   color: hsl(228, 45%, 44%);
+// }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 47.9rem) {
   .article {
     position: relative;
-    width: 326px;
-    height: 545px;
-    margin: 2rem 2rem 0 2rem;
+    padding: 0;
+    width: 20.4rem;
+    height: 34rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -212,24 +217,24 @@ body {
     width: 100%;
     height: auto;
     position: relative;
-    top: -6%;
+    top: -7%;
   }
   .article-container-details {
     flex-basis: 57%;
-    padding: 2.7em 2.4em 1.5em 2.3em;
+    padding: 2.3em 2.1em 1.1em 2em;
     border-radius: 0 0 1em 1em;
   }
 
   .article-title {
-    font-size: 1.27rem;
-    line-height: 145%;
+    font-size: 1rem;
+    line-height: 150%;
     color: var(--verydarkgrayishblue);
   }
 
   .article-desc {
-    font-size: 1.03rem;
+    font-size: 0.83rem;
     font-weight: 500;
-    line-height: 145%;
+    line-height: 150%;
   }
 
   .contact-name {
@@ -242,16 +247,16 @@ body {
 
   .shareicons {
     position: absolute;
-    width: 326px;
-    height: 5rem;
-    padding: 0 2.4em 1em 2.3em;
-    top: 35.7em;
-    left: 0;
+    width: 100%;
+    min-height: 4.4rem;
+    padding: 0 2.4em 0 2.3em;
+    top: 28.6rem;
+    right: 0;
     background-color: var(--verydarkgrayishblue);
     display: flex;
     flex-direction: row;
     border-radius: 0 0 1em 1em;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 1.5em;
   }

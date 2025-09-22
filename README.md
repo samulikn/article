@@ -22,7 +22,7 @@ To build responsive article preview component with posibility to see the social 
 
 ### Screenshot
 
-![Article preview component](images/desktop-active-screenshot.jpg)
+![Article preview component](images/desktop-screenshot.png)
 
 ### Links
 
