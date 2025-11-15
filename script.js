@@ -3,31 +3,38 @@ const shareIcon = document.getElementById("shareicon");
 const shareTo = document.getElementById("shareto");
 const triangle = document.getElementById("triangle");
 
+function addElementVisibility(elements = [], value) {
+  elements.forEach((element) => {
+    eval(`${element}.style.visibility = "${value}"`);
+  });
+}
+
+function modifyElementClasses(element, operation, classes = []) {
+  const classList = classes.join("','");
+  eval(`${element}.classList.${operation}('${classList}')`);
+}
+
 // Show social media links
 shareBtn.onclick = () => {
-  shareTo.style.visibility = "visible";
-  triangle.style.visibility = "visible";
-
-  shareBtn.classList.add("sharebtn-active");
-  shareIcon.classList.add("shareicon-active");
+  addElementVisibility(["shareTo", "triangle"], "visible");
+  modifyElementClasses("shareBtn", "add", ["sharebtn-active"]);
+  modifyElementClasses("shareIcon", "add", ["shareicon-active"]);
 };
 
-const removeActiveState = () => {
-  shareTo.style.visibility = "hidden";
-  triangle.style.visibility = "hidden";
-
-  shareBtn.classList.remove("sharebtn-active");
-  shareIcon.classList.remove("shareicon-active");
+const hideSocialMediaLinks = () => {
+  addElementVisibility(["shareTo", "triangle"], "hidden");
+  modifyElementClasses("shareBtn", "remove", ["sharebtn-active"]);
+  modifyElementClasses("shareIcon", "remove", ["shareicon-active"]);
 };
 
 // Close sharing container on Esc button
 document.addEventListener("keydown", (e) => {
   if (e.code === "Escape") {
-    removeActiveState();
+    hideSocialMediaLinks();
   }
 });
 
-// When the user clicks anywhere outside of the sharing content, close it
+// When the user clicks anywhere outside of the sharing content, close social media links
 document.addEventListener("click", (e) => {
   const sharingVisibility = shareTo.style.visibility;
   if (
@@ -35,6 +42,6 @@ document.addEventListener("click", (e) => {
     !shareTo.contains(e.target) &&
     sharingVisibility === "visible"
   ) {
-    removeActiveState();
+    hideSocialMediaLinks();
   }
 });
